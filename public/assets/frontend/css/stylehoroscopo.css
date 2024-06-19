@@ -1,0 +1,79 @@
+/* Estilo de la sección que contiene el formulario */
+section {
+    background-color: #1a1a1a; /* Fondo gris oscuro para la sección */
+    border: 2px solid #00ff00; /* Borde verde brillante */
+    padding: 20px; /* Espacio interno alrededor del contenido */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 10px #00ff00; /* Sombra verde brillante para dar efecto de resplandor */
+    width: 300px; /* Ancho fijo de la sección */
+    text-align: center; /* Centrar el texto dentro de la sección */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 150px; /* Ajustar esta medida para posicionar debajo de la barra de navegación */
+    left: 50%; /* Posicionar al centro horizontalmente */
+    transform: translateX(-50%); /* Ajustar para centrar completamente */
+}
+
+/* Estilo del título (h3) dentro de la sección */
+h3 {
+    color: #00ff00; /* Color de texto verde brillante */
+    margin-top: 0; /* Sin margen superior */
+    font-size: 2em; /* Tamaño de fuente grande */
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00; /* Efecto de sombra de texto para resplandor */
+}
+
+/* Estilo del párrafo dentro de la sección */
+p {
+    margin: 10px 0; /* Márgenes superior e inferior de 10px */
+    font-size: 1.2em; /* Tamaño de fuente ligeramente aumentado */
+    color: #00ff00; /* Color de texto verde brillante */
+}
+
+/* Estilo del formulario */
+form {
+    display: flex; /* Usar flexbox para disposición de los elementos del formulario */
+    flex-direction: column; /* Disposición en columna */
+    gap: 10px; /* Espacio entre los elementos del formulario */
+}
+
+/* Estilo de las etiquetas del formulario */
+label {
+    margin-bottom: 5px; /* Espacio inferior para separar de los inputs */
+    color: #00ff00; /* Color de texto verde */
+    font-size: 1em; /* Tamaño de fuente estándar */
+}
+
+/* Estilo del elemento select */
+select {
+    background-color: #0d0d0d; /* Fondo negro */
+    color: #00ff00; /* Texto verde */
+    border: 1px solid #00ff00; /* Borde verde */
+    padding: 10px; /* Espacio interno */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 1em; /* Tamaño de fuente estándar */
+}
+
+/* Estilo del botón de envío */
+input[type="submit"] {
+    background-color: #0d0d0d; /* Fondo negro */
+    color: #00ff00; /* Texto verde */
+    border: 1px solid #00ff00; /* Borde verde */
+    padding: 10px; /* Espacio interno */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición suave para cambios de fondo */
+    font-size: 1em; /* Tamaño de fuente estándar */
+}
+
+/* Estilo del botón de envío cuando el mouse está encima */
+input[type="submit"]:hover {
+    background-color: #00ff00; /* Fondo verde al pasar el mouse */
+    color: #0d0d0d; /* Texto negro al pasar el mouse */
+}
+
+/* Estilo del resultado del horóscopo */
+#resultadoHoroscopo {
+    margin-top: 20px; /* Espacio superior para separar del formulario */
+    font-size: 1.2em; /* Tamaño de fuente aumentado */
+    color: #00ff00; /* Texto verde */
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00; /* Efecto de sombra de texto para resplandor */
+}

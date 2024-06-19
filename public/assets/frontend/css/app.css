@@ -1,0 +1,47 @@
+body{
+    background-image: url("../img/imgfondo2.jpg");
+    text-align: center;
+}
+nav {
+  background-color: #031f07; /* Color de fondo oscuro */
+  padding: 10px; /* Espacio alrededor del contenido */
+  background-image: url(../img/imgnav2.jpg);
+}
+#menu {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: flex-start; /* Alinea los botones al inicio del contenedor (parte superior) */
+    padding-top: 20px; /* Espacio en la parte superior del contenedor */
+  }
+  
+  #menu button {
+    background-color: #0d0d0d; /* Fondo negro */
+    color: #00ff00; /* Texto verde */
+    padding: 15px 30px; /* Espaciado interno */
+    margin: 10px; /* Espaciado externo */
+    border: 2px solid #00ff00; /* Borde verde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambio de cursor */
+    font-size: 16px; /* Tamaño de fuente */
+    font-family: 'Arial', sans-serif; /* Fuente */
+    text-transform: uppercase; /* Convertir texto a mayúsculas */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+  }
+  
+  #menu button:hover {
+    background-color: #00ff00; /* Fondo verde al pasar el ratón */
+    color: #0d0d0d; /* Texto negro al pasar el ratón */
+  }
+  
+  /* Estilo adicional para resaltar el botón activo */
+  #menu button:active {
+    transform: translateY(2px); /* Efecto de pulsación */
+    box-shadow: 0 0 10px #00ff00; /* Sombra verde */
+  }
+  
+  
+  
+main{
+    text-align: center;
+}
+

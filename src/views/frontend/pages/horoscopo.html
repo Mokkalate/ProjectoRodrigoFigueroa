@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horóscopo Informático</title>
+    <link rel="stylesheet" href="/public/assets/frontend/css/stylehoroscopo.css">
+</head>
+<body>
+    <div><section>
+        <h3>Seleccione su Horóscopo</h3>
+        <div>
+            <p>Elija su signo del zodíaco para recibir su predicción:</p>
+        </div>
+        <div>
+            <form id="formHoroscopo">
+                <div>
+                    <label for="signo">Signo del Zodíaco:</label>
+                </div>
+                <div>
+                    <select id="signo" name="signo" required>
+                        <option value="">Seleccione su signo</option>
+                        <option value="aries">Aries</option>
+                        <option value="tauro">Tauro</option>
+                        <option value="geminis">Géminis</option>
+                        <option value="cancer">Cáncer</option>
+                        <option value="leo">Leo</option>
+                        <option value="virgo">Virgo</option>
+                        <option value="libra">Libra</option>
+                        <option value="escorpio">Escorpio</option>
+                        <option value="sagitario">Sagitario</option>
+                        <option value="capricornio">Capricornio</option>
+                        <option value="acuario">Acuario</option>
+                        <option value="piscis">Piscis</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="submit" value="Consultar Horóscopo">
+                </div>
+            </form>
+            <div id="resultadoHoroscopo"></div>
+        </div>
+    </section>
+    <script src="script.js"></script></div>
+</body>
+</html>

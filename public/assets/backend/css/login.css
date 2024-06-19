@@ -1,0 +1,74 @@
+#bodylogin {
+    background-color: #0d0d0d;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+#sectionlogin {
+    background-color: #1a1a1a;
+    border: 2px solid #00ff00;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #00ff00;
+}
+
+h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+    background-color: #0d0d0d;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #0d0d0d;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #00ff00;
+    color: #0d0d0d;
+}
+
+#mensajeError {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#Dashboard {
+    color: blue;
+    text-align: center;
+    margin-top: 10px;
+}

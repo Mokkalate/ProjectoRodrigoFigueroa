@@ -1,0 +1,86 @@
+.calculator {
+    width: 350px;
+    background: linear-gradient(145deg, #1a1a1a, #333333); /* Fondo con gradiente oscuro */
+    border: 2px solid #00ff00; /* Borde verde brillante */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #00ff00; /* Sombra verde brillante para dar efecto de resplandor */
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Input */
+.calculator input {
+    width: calc(100% - 40px); /* Ajuste para el padding */
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    background-color: #0d0d0d; /* Fondo negro */
+    color: #00ff00; /* Texto verde */
+    border: 1px solid #00ff00; /* Borde verde */
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 5px #000000, inset -2px -2px 5px #555555; /* Efecto relieve */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.calculator input:focus {
+    outline: none;
+    box-shadow: inset 4px 4px 8px #00ff00, inset -4px -4px 8px #333333; /* Sombra al enfocar */
+    background-color: #1a1a1a; /* Fondo más oscuro al enfocar */
+}
+
+/* Botones */
+.calculator button {
+    width: 22%;
+    padding: 20px;
+    font-size: 18px;
+    margin: 10px 3%;
+    background: linear-gradient(145deg, #333333, #1a1a1a); /* Botones con gradiente oscuro */
+    color: #00ff00; /* Texto verde */
+    border: 1px solid #00ff00; /* Borde verde */
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px #000000, -4px -4px 8px #444444; /* Efecto relieve */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calculator button:hover {
+    background: linear-gradient(145deg, #1a1a1a, #333333); /* Cambio de gradiente al pasar el ratón */
+    box-shadow: 4px 4px 12px #000000, -4px -4px 12px #444444; /* Sutil aumento de sombra */
+}
+
+.calculator button:active {
+    transform: scale(0.95); /* Reducir tamaño al hacer clic */
+    box-shadow: inset 4px 4px 8px #000000, inset -4px -4px 8px #444444; /* Sombra interna al hacer clic */
+}
+
+/* Botón Cero */
+.calculator button#cero {
+    width: 48%;
+    background: linear-gradient(145deg, #ff7e79, #ff9a94); /* Gradiente para el botón especial */
+}
+
+.calculator button#cero:hover {
+    background: linear-gradient(145deg, #ff9a94, #ff7e79); /* Cambio de gradiente al pasar el ratón */
+}
+
+/* Botón Igual */
+.calculator button#igual {
+    width: 48%;
+    height: 100px;
+    background: linear-gradient(145deg, #66e7b6, #83f4d2); /* Gradiente para el botón especial */
+}
+
+.calculator button#igual:hover {
+    background: linear-gradient(145deg, #83f4d2, #66e7b6); /* Cambio de gradiente al pasar el ratón */
+}
+
+/* Botón de Operación */
+.calculator button#OP {
+    height: 100px;
+    background: linear-gradient(145deg, #7ea1ff, #95b5ff); /* Gradiente para el botón especial */
+}
+
+.calculator button#OP:hover {
+    background: linear-gradient(145deg, #95b5ff, #7ea1ff); /* Cambio de gradiente al pasar el ratón */
+}

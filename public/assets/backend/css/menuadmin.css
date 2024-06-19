@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-bottom: 2px solid #ff00ff;
+    display: flex;
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+li {
+    float: left; /* Mantiene los elementos a la izquierda */
+}
+
+li a {
+    display: block;
+    color: #00ff00;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+li a:hover {
+    background-color: #005500;
+    color: #ffffff;
+}
+
+li a:active {
+    background-color: #00ff00;
+    color: #1a1a1a;
+}
+
+.logout-button {
+    background-color: #ff0000;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: 1040px; /* Espacio entre el último elemento y el botón de cerrar sesión */
+}
+
+.logout-button:hover {
+    background-color: #cc0000;
+}
+
+.logout-button:active {
+    background-color: #ff0000;
+    color: #1a1a1a;
+}
