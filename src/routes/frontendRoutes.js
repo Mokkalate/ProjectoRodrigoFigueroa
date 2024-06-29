@@ -5,20 +5,19 @@ const loadAppHtml = require('../utils/loadAppHtml');
 const tipo_plantilla = 'frontend';
 
 router.get('/', (req, res) => {
-    loadAppHtml(tipo_plantilla, 'index',`${process.env.APP_NAME}: Principal` , 'Bienvenido al sitio principal', res);
+    loadAppHtml(tipo_plantilla, 'index',`${process.env.APP_NAME}: Home` , 'Bienvenido al sitio principal', res);
 });
 
-router.get('/animales', (req, res) => {
-    loadAppHtml(tipo_plantilla, 'animales', `${process.env.APP_NAME}: Animales`, 'Pienza en un animal.', res);
+router.get('/nosotros', (req, res) => {
+    loadAppHtml(tipo_plantilla, 'nosotros', `${process.env.APP_NAME}: Nosotros`, 'Misión: Lorem ipsum dolor.', res);
 });
 
-router.get('/horoscopo', (req, res) => {
-    loadAppHtml(tipo_plantilla, 'Horoscopo', `${process.env.APP_NAME}: Leemos tu futuro?`, 'Quieres saber tu futuro?.', res);
+router.get('/servicios', (req, res) => {
+    loadAppHtml(tipo_plantilla, 'servicios', `${process.env.APP_NAME}: Servicios`, 'Diseño y Desarrollo Web.', res);
 });
 
-router.get('/calculadora', (req, res) => {
-    loadAppHtml(tipo_plantilla, 'calculadora', `${process.env.APP_NAME}: Calculadora`, 'Correo de contacto: example@example.cl', res);
+router.get('/contacto', (req, res) => {
+    loadAppHtml(tipo_plantilla, 'contacto', `${process.env.APP_NAME}: Contacto`, 'Correo de contacto: example@example.cl', res);
 });
 
 module.exports = router;
- 

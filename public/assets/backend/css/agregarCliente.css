@@ -1,0 +1,49 @@
+#formUpload {
+    background-color: #1c1c1c;
+    padding: 20px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    width: 300px;
+}
+
+#formUpload div {
+    margin-bottom: 15px;
+}
+
+#formUpload label {
+    color: #66d9ef;
+    font-weight: bold;
+}
+
+#formUpload input[type="text"],
+#formUpload input[type="email"],
+#formUpload select {
+    width: 100%;
+    padding: 8px;
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    border-radius: 3px;
+    color: #f0f0f0;
+}
+
+#formUpload input[type="text"]:focus,
+#formUpload input[type="email"]:focus,
+#formUpload select:focus {
+    border-color: #66d9ef;
+    outline: none;
+}
+
+#formUpload input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #66d9ef;
+    border: none;
+    border-radius: 3px;
+    color: #1c1c1c;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#formUpload input[type="submit"]:hover {
+    background-color: #a6e22e;
+}

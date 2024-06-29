@@ -30,6 +30,7 @@ app.use(session({
 app.use(flash());
 
 // Configurar Express para servir archivos estáticos desde la carpeta 'public'
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.use('/public', express.static(path.join(__dirname, '../public')));
 
