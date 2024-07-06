@@ -3,7 +3,6 @@ const DataBase = require('../conexionModel');
 class Cliente {
     constructor(id, nombres, direccion, correo, telefono, estado) {
         this.id = id;
-        
         this.nombres = nombres;
         this.direccion = direccion;
         this.correo = correo;
@@ -22,6 +21,23 @@ class Cliente {
             return resultado;
         } catch (error) {
             console.error('Error al agregar cliente:', error);
+            throw error;
+        }
+    }
+    async eliminarCliente() {
+        const db = DataBase.getInstance(); // Obtiene una instancia de la conexión a la base de datos
+        try {
+            const query = 'DELETE FROM clientes WHERE ID=?';
+            const resultado = await db.ejecutarQuery(query, [this.id]);
+            if (resultado.affectedRows > 0) {
+                console.log('Cliente eliminado con éxito');
+                return true;
+            } else {
+                console.log('No se encontró el Cliente con el ID especificado');
+                return false;
+            }
+        } catch (error) {
+            console.error('Error al eliminar el Cliente:', error);
             throw error;
         }
     }

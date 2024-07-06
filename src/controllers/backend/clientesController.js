@@ -14,7 +14,7 @@ function ingresarCliente(req, res)
         const htmlContent = fs.readFileSync(filePath, 'utf8');
     
         loadAppHtml('backend', 'clientes_ingresar', `${process.env.APP_NAME}: Módulo Clientes`, htmlContent, res);
-
+        
     } catch (err) {
         console.error('Error al leer el archivo HTML:', err);
     }
@@ -52,6 +52,7 @@ async function listarClientes(req, res) {
                             '<td> </td>'+
                             '<td> </td>'+
                             `<td><a class="btn btn-primary" href='/sitio-admin/modulo-editar-cliente/${ cliente.id }'> Editar </a> </td>`+
+                            `<td><a class="btn btn-primary" href='/sitio-admin/modulo-eliminar-cliente/${ cliente.id }'> Eliminar </a> </td>`+
                         `</tr>`;
             });
             html += '</table>';
@@ -116,5 +117,34 @@ async function guardarEdicion(req, res)
     }
     
 }
+async function saveNewCliente (req, res)
+{
+    let user = req.session.user;
+    const { id, nombres, direccion, correo, telefono, estado } = req.body;
+    const cliente = new Cliente(id, nombres, direccion, correo, telefono, estado);
+    const respuesta = cliente.agregarCliente();
+    if (respuesta)
+    {
+        req.flash('msg', 'Se ha editado');
+        res.status(200).json({ message: `Cliente ${nombres} editado correctamente.` });
+        
+    }else{
+        req.flash('msg', 'No se ha podido editar.');
+        res.status(404).json({ message: `No se pudo editar el cliente ${nombres}.` });
+    }
+    
+}
+async function eliminarCliente(req, res) {
+    const id= req.params.id;
+    const cliente = new Cliente(id);
+    const respuesta = await cliente.eliminarCliente();
+    if (respuesta) {
+        req.flash('msg', 'Se ha eliminado');
+        res.redirect('/sitio-admin/modulo-listar-clientes'); // Redirige a la página de listar clientes
+    } else {
+        req.flash('msg', 'No se ha podido eliminar.');
+        res.status(404).json({ message: 'No se pudo eliminar el Cliente ${id}.' });
+    }
+}
 
-module.exports = { ingresarCliente,  listarClientes, editarCliente, guardarEdicion};
+module.exports = { ingresarCliente,  listarClientes, editarCliente, guardarEdicion, saveNewCliente, eliminarCliente};

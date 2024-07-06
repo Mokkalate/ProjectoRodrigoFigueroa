@@ -1,0 +1,23 @@
+<form id="formUpdateProveedor">
+    <input type="hidden" id="id"  value="{{ id }}">
+    <div><label for="nombre">Nombre del Proveedor</label></div>
+    <div><input type="text" id="nombres" name="nombres" value="{{ nombres }}"></div>
+    <div><label for="direccion">Dirección</label></div>
+    <div><input type="text" id="direccion" name="direccion" value="{{ direccion }}"></div>
+    <div><label for="correo">Correo Electrónico</label></div>
+    <div><input type="email" id="correo" name="correo" value="{{ correo }}"></div>
+    <div><label for="telefono">Teléfono</label></div>
+    <div><input type="text" id="telefono" name="telefono" value="{{ telefono }}"></div>
+    <div><label for="contacto">Persona de Contacto</label></div>
+    <div><input type="text" id="contacto" name="contacto" value="{{ contacto }}"></div>
+    <div><label for="estado">Estado</label></div>
+    <div>
+        <select name="estado" id="estado">
+            {{ options }}
+        </select>
+    </div>
+    <div>
+        <input type="submit" id="guardar" name="guardar_proveedor" value="Guardar">
+    </div>
+</form>
+<div id="mensajeError"></div>

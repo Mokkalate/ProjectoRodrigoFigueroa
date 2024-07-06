@@ -1,0 +1,24 @@
+<form id="formInsertarProveedor">
+    <div><label for="nombre">Nombre del Proveedor</label></div>
+    <div><input type="text" id="nombre" name="nombre" required></div>
+    <div><label for="direccion">Dirección</label></div>
+    <div><input type="text" id="direccion" name="direccion" required></div>
+    <div><label for="correo">Correo Electrónico</label></div>
+    <div><input type="email" id="correo" name="correo" required></div>
+    <div><label for="telefono">Teléfono</label></div>
+    <div><input type="text" id="telefono" name="telefono" required></div>
+    <div><label for="contacto">Persona de Contacto</label></div>
+    <div><input type="text" id="contacto" name="contacto" required></div>
+    <div><label for="estado">Estado</label></div>
+    <div>
+        <select name="estado" id="estado" required>
+            <option value="1" selected>Habilitado</option>
+            <option value="0">Deshabilitado</option>
+        </select>
+    </div>
+    <div>
+        <input type="submit" name="ingresar_proveedor" id="ingresar" value="Ingresar">
+    </div>
+</form>
+<div id="mensajeError">
+</div>
